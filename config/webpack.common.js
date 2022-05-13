@@ -39,24 +39,6 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          query: {
-            plugins: [
-              [
-                require('babel-plugin-transform-imports'),
-                {
-                  'my-library': {
-                    transform: function (importName) {
-                      return 'my-library/etc/' + importName.toUpperCase()
-                    },
-                    preventFullImport: true,
-                  },
-                },
-              ],
-            ],
-          },
-        },
       },
       { test: /\.xml$/, use: ['xml-loader'] },
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
@@ -69,15 +51,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     alias: {
       '@': paths.src,
-      // assets: paths.public,
+      assets: paths.public,
     },
   },
-}
-
-module: {
-  rules: [
-    {
-      test: /\.js$/,
-    },
-  ]
 }
