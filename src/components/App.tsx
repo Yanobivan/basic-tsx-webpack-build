@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import '../styles/index.scss';
 
 const App = () => {
-  return <div>Project</div>
-}
+  return (
+    <>
+      <div className="project__container">Project</div>
+    </>
+  );
+};
 
-export default App
+export default App;

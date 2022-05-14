@@ -8,8 +8,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "CI=true"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx, ts, tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
