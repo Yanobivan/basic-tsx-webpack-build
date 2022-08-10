@@ -42,7 +42,6 @@
     "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^6.7.1",
     "prettier": "^2.6.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -56,5 +55,9 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "postcss-plugins": "^1.13.1",
+    "postcss-preset-env": "^7.7.2"
   }
 }
