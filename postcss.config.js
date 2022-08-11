@@ -1,11 +1,9 @@
-const postcssPresetEnv = require('postcss-preset-env');
+import postcssPresetEnv from 'postcss-preset-env';
 
-module.exports = {
-  plugins: [
-    postcssPresetEnv({
-      'postcss-preset-env': {
-        browsers: 'last 2 versions',
-      },
-    }),
-  ],
-};
+export const plugins = [
+  postcssPresetEnv({
+    'postcss-preset-env': {
+      browsers: 'last 2 versions',
+    },
+  }),
+];
